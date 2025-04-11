@@ -1,5 +1,8 @@
 import pickle
+import highway_env
+import gymnasium as gym
 
+gym.register_envs(highway_env)
 
 config_dict = {
     "observation": {
@@ -49,6 +52,6 @@ config_dict = {
 with open("config.pkl", "wb") as f:
     pickle.dump(config_dict, f)
 
-# env = gym.make("highway-fast-v0", render_mode="rgb_array")
-# env.unwrapped.configure(config)
-# print(env.reset())
+env = gym.make("highway-fast-v0", render_mode="human")
+env.unwrapped.configure(config_dict)
+print(env.reset())
