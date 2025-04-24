@@ -16,7 +16,7 @@ config_dict = {
     },
     "simulation_frequency": 15,
     "policy_frequency": 5,
-    "duration": 500,  # Augmenté pour permettre plus de temps d'exploration
+    "duration": 300,  # Augmenté pour permettre plus de temps d'exploration
     "collision_reward": -2.0,  # Pénalité plus forte pour collision
     "lane_centering_cost": 4,
     "action_reward": -0.3,
